@@ -14,7 +14,7 @@
         <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- JQuery core CSS -->
-        <script href="static/jquery/jquery.min.js"></script>
+        <script src="static/jquery/jquery.min.js"></script>
 
         <!-- Custom JS -->
         <script src="static/js/functions.js"></script>
@@ -25,27 +25,24 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script type="text/javascript">
-            function getSummoner() {
-                var summName = document.getElementById('inputName').value;
-                var url = "/api/findSummByName/" + summName;
-                httpGetAsync(url, callback);
-            }
-        </script>
-            
     </head>
 
     <body>
-        <div class="container">
-            <div class="col-lg-6">        
-                <form class="form-signin">
-                    <h2 class="form-signin-heading">League Finder v1.0</h2>
-                    <!--<label for="inputEmail" class="sr-only">Nome do invocador</label>-->
-                    <input id="inputName" class="form-control" placeholder="Nome do invocador">
-                    <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="getSummoner()">Pesquisar</button>
-                </form>
-            </div> 
-        </div> <!-- /container -->
+        <div class="panel panel-default ">
+            <div class="panel-body">
+                <div class="container">
+                    <div class="col-lg-12">
+                        <div class="col-lg-4 col-lg-offset-4">     
+                            <form class="form-inline" action="/api/summoner" method="POST">
+                                <h2 class="form-signin-heading">League Finder v1.0</h2>
+                                    <input id="inputName" class="form-control" placeholder="Nome do invocador" name="summoner_name">
+                                    <input value="Pesquisar" type="submit" class="btn btn-primary" />
+                            </form>
+                        </div>
+                    </div> 
+                </div> <!-- /container -->
+            </div> <!-- /panel-body -->
+        </div> <!-- /panel-default -->
     </body>
     
 </html>

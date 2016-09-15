@@ -1,11 +1,16 @@
+var PORT    = 3000;
+
 var http    = require('http');
 var express = require('express');
 var app     = express();
+var bodyParser = require('body-parser');
+
+/**
+ *  Node Apis
+ */
 var api     = require('./routes/api');
 var index   = require('./routes/index');
-var PORT    = 3000;
 
-// var routes = require('routes/index.js');
 /**
  *  Server init 
  */
@@ -17,6 +22,9 @@ app.listen(PORT, function () {
  * Including static folders and files
  */
 app.use('/static', express.static(__dirname + '/public'));
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 /**
  * Routes

@@ -3,9 +3,12 @@ var router = express.Router();
 
 var endpoints = require('./endpoints/endpoints');
 
-router.get('/findSummByName/:name', function (req, res){
-    console.log("api.js > findSummByName: req: " + req.params.name);
-    endpoints.findSummoner(req.params.name);
+router.post('/summoner', function(req, res) {
+    var name = req.body.summoner_name;
+    console.log('PARAM: ' + name);
+    endpoints.findSummonerByName(name, function(data) {
+        console.log(data[name.toLowerCase()]);
+    });
 });
 
 module.exports = router;

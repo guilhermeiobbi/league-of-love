@@ -1,14 +1,11 @@
+function getSummoner() {
+    var summName = $('#inputName').val();
+    var url = "/api/summoner/" + summName;
+    
+    $.get(url, function(err, res) {
+        alert('Deu bom local call' + res);
 
-function httpGetAsync(theUrl, callback) {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function() { 
-        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-            callback(xmlHttp.responseText);
-    }
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-    xmlHttp.send(null);
-}
-
-function callback(res) {
-    console.log(res);
+        console.log(res);
+    });
+    return false;
 }
