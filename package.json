@@ -1,16 +1,13 @@
 {
-  "name": "myapp",
+  "name": "league-finder",
   "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
   "dependencies": {
-    "body-parser": "~1.15.1",
+    "body-parser": "^1.15.2",
     "debug": "~2.2.0",
-    "ejs": "^2.5.1",
     "express": "~4.13.4",
-    "node-rest-client": "^2.0.1",
-    "nodemon": "^1.10.2"
+    "https": "^1.0.0",
+    "nodemon": "^1.10.2",
+    "query-string": "^4.2.3"
   }
 }

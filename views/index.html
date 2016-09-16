@@ -23,26 +23,17 @@
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-        <script type="text/javascript">
-            function getSummoner() {
-                var summName = document.getElementById('inputName').value;
-                var url = "/api/findSummByName/" + summName;
-                httpGetAsync(url, callback);
-            }
-        </script>
-            
+        <![endif]-->           
     </head>
 
     <body>
         <div class="container">
-            <div class="col-lg-6">        
-                <form class="form-signin">
+            <div class="col-lg-6 col-md-offset-3">        
+                <form class="form-signin" action="/api/findSummoner/" method="POST">
                     <h2 class="form-signin-heading">League Finder v1.0</h2>
                     <!--<label for="inputEmail" class="sr-only">Nome do invocador</label>-->
-                    <input id="inputName" class="form-control" placeholder="Nome do invocador">
-                    <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="getSummoner()">Pesquisar</button>
+                    <input id="inputName" class="form-control" placeholder="Nome do invocador" name="summoner_name">
+                    <input class="btn btn-lg btn-primary btn-block" type="submit" value="Pesquisar"/>
                 </form>
             </div> 
         </div> <!-- /container -->
