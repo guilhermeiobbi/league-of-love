@@ -1,11 +1,8 @@
-function getSummoner() {
-    var summName = $('#inputName').val();
-    var url = "/api/summoner/" + summName;
-    
-    $.get(url, function(err, res) {
-        alert('Deu bom local call' + res);
+$(function(){
 
-        console.log(res);
-    });
-    return false;
-}
+    $(".dropdown-menu li a").click(function(){
+      $(".btn:first-child").text($(this).text());
+      $(".btn:first-child").val($(this).text());
+   });
+
+});

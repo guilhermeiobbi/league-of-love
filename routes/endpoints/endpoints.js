@@ -19,9 +19,8 @@ function findSummonerByName(name, success) {
     
     var options = {
         host: HOST,
-        path: endpoint
+        path: endpoint,
         method: 'GET'
-        // headers: headers
     };
 
     var req = https.request(options, function(res) {
