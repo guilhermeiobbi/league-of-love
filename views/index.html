@@ -39,7 +39,7 @@
                                     <input id="inputName" class="form-control" placeholder="Nome do invocador" name="summoner_name">
                                     <input id="inputRegion" type="hidden" name="region" value="BR">
                                     <div class="input-group-btn">
-                                        <button type="button" class="btn btn-default">BR </button>
+                                        <a href="#" role="button" class="btn btn-default disabled">BR </a>
                                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" 
                                                 aria-haspopup="true" aria-expanded="false">
                                             <span class="caret"></span>
@@ -61,7 +61,7 @@
                                         </ul>
                                     </div>
                                 </div> <!-- input-group -->
-                                <input value="Pesquisar" type="submit" class="btn btn-primary btn-sm" />
+                                <button id="searchButton" type="submit" data-loading-text="..." class="btn btn-primary btn-md"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                             </form>
                         </div>
                     </div> 

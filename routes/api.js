@@ -15,9 +15,13 @@ router.post('/findSummoner', function(req, res) {
         console.log('trimmedName: ' + trimmedName);
         var summId = data[trimmedName].id;
         endpoints.findLiveGameById(reg, summId, function(data) {
-            if(data[gameType] == 'MATCHED_GAME') {
-                res.send('INVOCADOR EM JOGO RANKEADO. APENAS RESPEITE!')
-                res.end();
+            if(data['status']) {
+                res.send('<h1>INVOCADOR NAO ESTA EM JOGO.</h1>');
+            } else {
+                if(data['gameType'] == 'MATCHED_GAME') {
+                    res.send('<h1>INVOCADOR EM JOGO RANKEADO. APENAS RESPEITE!</h1>')
+                    res.end();
+                }
             }
         })
         

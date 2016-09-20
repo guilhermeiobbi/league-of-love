@@ -1,11 +1,11 @@
 var querystring = require('querystring');
 var https       = require('https');
 
-var ENDPOINT = 'br.api.pvp.net'
+var API_ENDPOINT = '.api.pvp.net'
 var WEBSERVICE = '/api/lol/';
 
 var WS_METHOD = '/v1.4/summoner/by-name/';
-var WS_METHOD_CURRENT_GAME = 'observer-mode/rest/consumer/getSpectatorGameInfo/'
+var WS_METHOD_CURRENT_GAME = '/observer-mode/rest/consumer/getSpectatorGameInfo/'
 
 // var ENDPOINT_FIND_LAST_GAMES_BY_ID = 'https://br.api.pvp.net/api/lol/br/v1.3/game/by-summoner/{summoner-id}/recent';
 
@@ -15,11 +15,11 @@ var parameters = {
 
 function findSummonerByName(reg, name, success) {
     var path = WEBSERVICE + reg + WS_METHOD + name + '?' + querystring.stringify(parameters);
-
-    console.log('GET on: ' + ENDPOINT + path);
+    var endpoint = reg + API_ENDPOINT;
+    console.log('GET on: ' + endpoint + path);
     
     var options = {
-        host: ENDPOINT,
+        host: endpoint,
         path: path
     };
 
@@ -29,12 +29,12 @@ function findSummonerByName(reg, name, success) {
 }
 
 function findLiveGameById(reg, id, success) {
-    var path = WEBSERVICE + WS_METHOD_CURRENT_GAME + getPlatformId(reg) + '/' + id + '?' + querystring.stringify(parameters);
-
-    console.log('GET on: ' + ENDPOINT + path);
+    var path = WS_METHOD_CURRENT_GAME + getPlatformId(reg) + '/' + id + '?' + querystring.stringify(parameters);
+    var endpoint = reg + API_ENDPOINT;
+    console.log('GET on: ' + endpoint);
 
     var options = {
-        host: ENDPOINT,
+        host: endpoint,
         path: path
     };
 
