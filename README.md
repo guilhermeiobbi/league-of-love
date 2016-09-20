@@ -1,5 +1,5 @@
 # league-finder
 
-This project might be something useful, someday...
+This project might be useful, someday...
 
-Actually it is a user-search platform for League of Legends.
+But actually it is a user-search platform for League of Legends.
