@@ -1,11 +1,10 @@
-var express            = require('express');
-var router             = express.Router();
-var endpoints          = require('./endpoints/endpoints');
-const pug              = require('pug');
+var express   = require('express');
+var router    = express.Router();
+var endpoints = require('./endpoints/endpoints');
+const pug     = require('pug');
 
 router.post('/findSummoner', function(req, res) {
     var name = (req.body.summoner_name).trim();
-    var loweredName = name.toLowerCase();
     var filteredName = name.replace(/\s/g, "%20")
     var reg = req.body.region;
     console.log('PARAMs: ' + filteredName + ', ' + reg);
@@ -13,9 +12,9 @@ router.post('/findSummoner', function(req, res) {
     endpoints.findSummonerByName(reg, filteredName, function(data) {
         console.log('Invocador encontrado: ' + JSON.stringify(data));
         
-        trimmedName = loweredName.replace(/\s+/g, '');
-        console.log('trimmedName: ' + trimmedName);
-        var summId = data[trimmedName].id;
+        validName = name.toLowerCase().replace(/\s+/g, '');
+        console.log('validName: ' + validName);
+        var summId = data[validName].id;
         endpoints.findLiveGameById(reg, summId, function(data) {
             if(data['status']) {
                 res.render(
