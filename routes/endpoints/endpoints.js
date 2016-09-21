@@ -31,7 +31,7 @@ function findSummonerByName(reg, name, success) {
 function findLiveGameById(reg, id, success) {
     var path = WS_METHOD_CURRENT_GAME + getPlatformId(reg) + '/' + id + '?' + querystring.stringify(parameters);
     var endpoint = reg + API_ENDPOINT;
-    console.log('GET on: ' + endpoint);
+    console.log('GET on: ' + endpoint + path);
 
     var options = {
         host: endpoint,

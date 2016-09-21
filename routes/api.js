@@ -1,9 +1,11 @@
-var express = require('express');
-var router = express.Router();
-var endpoints = require('./endpoints/endpoints');
+var express            = require('express');
+var router             = express.Router();
+var endpoints          = require('./endpoints/endpoints');
+const pug              = require('pug');
 
 router.post('/findSummoner', function(req, res) {
-    var name = (req.body.summoner_name).toLowerCase().trim();
+    var name = (req.body.summoner_name).trim();
+    var loweredName = name.toLowerCase();
     var filteredName = name.replace(/\s/g, "%20")
     var reg = req.body.region;
     console.log('PARAMs: ' + filteredName + ', ' + reg);
@@ -11,15 +13,20 @@ router.post('/findSummoner', function(req, res) {
     endpoints.findSummonerByName(reg, filteredName, function(data) {
         console.log('Invocador encontrado: ' + JSON.stringify(data));
         
-        trimmedName = name.replace(/\s+/g, '');
+        trimmedName = loweredName.replace(/\s+/g, '');
         console.log('trimmedName: ' + trimmedName);
         var summId = data[trimmedName].id;
         endpoints.findLiveGameById(reg, summId, function(data) {
             if(data['status']) {
-                res.send('<h1>INVOCADOR NAO ESTA EM JOGO.</h1>');
+                res.render(
+                    'notingame',
+                     { name: name });
             } else {
                 if(data['gameType'] == 'MATCHED_GAME') {
-                    res.send('<h1>INVOCADOR EM JOGO RANKEADO. APENAS RESPEITE!</h1>')
+                    // console.log('>>>>>>>> Nome: '+ data.participants.summonerName[name].championId)
+                    res.render(
+                    'ingame',
+                     { name: name });
                     res.end();
                 }
             }

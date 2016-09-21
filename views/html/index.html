@@ -33,10 +33,10 @@
                 <div class="container">
                     <div class="col-lg-12">
                         <div class="col-lg-6 col-lg-offset-4">
-                            <form class="form-inline" action="/api/findSummoner" method="POST">
+                            <form id="myForm" class="form-inline" action="/api/findSummoner" method="POST">
                                 <h2 class="form-signin-heading">League Finder v1.0</h2>
                                 <div class="input-group input-group-sm">
-                                    <input id="inputName" class="form-control" placeholder="Nome do invocador" name="summoner_name">
+                                    <input id="inputName" class="form-control" placeholder="Nome do invocador" name="summoner_name" autofocus>
                                     <input id="inputRegion" type="hidden" name="region" value="BR">
                                     <div class="input-group-btn">
                                         <a href="#" role="button" class="btn btn-default disabled">BR </a>
@@ -61,7 +61,9 @@
                                         </ul>
                                     </div>
                                 </div> <!-- input-group -->
-                                <button id="searchButton" type="submit" data-loading-text="..." class="btn btn-primary btn-md"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                <button id="searchButton" type="submit" data-loading-text="..." class="btn btn-primary btn-md">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
                             </form>
                         </div>
                     </div> 

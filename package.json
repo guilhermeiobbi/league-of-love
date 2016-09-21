@@ -9,6 +9,7 @@
     "https": "^1.0.0",
     "node-rest-client": "^2.0.1",
     "nodemon": "^1.10.2",
+    "pug": "^2.0.0-beta6",
     "querystring": "^0.2.0"
   }
 }
