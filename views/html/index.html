@@ -8,19 +8,22 @@
         <meta name="author" content="">
         <link rel="icon" href="../favicon.ico">
 
-        <title>League Finder v0.0.1</title>
+        <title>League of Love v0.0.1</title>
 
         <!-- JQuery core JS -->
         <script src="static/jquery/jquery.min.js"></script>
+
+        <!-- Custom JS -->
+        <script src="static/js/functions.js"></script>
+        
+        <!-- Font Awesome CDN -->
+        <script src="https://use.fontawesome.com/3e33bcd5f7.js"></script>
 
         <!-- Bootstrap core CSS -->
         <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
         <link href="static/css/jumbotron-narrow.css" rel="stylesheet">
-
-        <!-- Custom JS -->
-        <script src="static/js/functions.js"></script>
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -36,20 +39,20 @@
             <div class="header clearfix">
                 <nav>
                     <ul class="nav nav-pills pull-right">
-                        <li class="active" role="presentation"><a href="#">Home</a></li>
+                        <li class="active" role="presentation"><a href="/./.">Home</a></li>
                         <li role="presentation"><a href="#">Sobre</a></li>
                     </ul>
-                    <h3 class="text-muted">League Finder v0.0.1</h3>
+                    <h3 class="text-muted"> League of Love </h3>
                 </nav>
             </div>
 
-            <div class="panel panel-default ">
+            <div class="panel panel-default" style="border: none;">
                 <div class="panel-body">
                     <div class="container">
                         <div class="col-lg-12">
-                            <div class="col-lg-6 col-lg-offset-4">
+                            <div class="col-lg-4 col-lg-offset-4">
                                 <form id="myForm" class="form-inline" action="/api/findSummoner" method="POST">
-                                    <h2 class="form-signin-heading">League Finder v1.0</h2>
+                                    <h2 class="form-signin-heading"> League of Love </h2>
                                     <div class="input-group input-group-sm">
                                         <input id="inputName" class="form-control" placeholder="Nome do invocador" name="summoner_name" 
                                             required="true" autofocus>
@@ -77,8 +80,8 @@
                                             </ul>
                                         </div>
                                     </div> <!-- input-group -->
-                                    <button id="searchButton" type="submit" data-loading-text="..." class="btn btn-primary btn-md">
-                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                    <button id="searchButton" type="submit" class="btn btn-primary btn-md">
+                                        <i id="searchIcon" class="fa fa-search"></i>
                                     </button>
                                 </form>
                             </div>
@@ -87,6 +90,8 @@
                 </div> <!-- /panel-body -->
             </div> <!-- /panel-default -->
         </div>
+        
+        <footer class="footer" id="footer" style="text-align: center;"><p>© 2016 League of Love</p></footer>
     </body>
 
     <!-- Bootstrap core JS -->
