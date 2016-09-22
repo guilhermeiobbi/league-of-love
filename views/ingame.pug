@@ -2,7 +2,10 @@ extends includes/layout.pug
 block content
   div(class='jumbotron')
     h1 #[span(class='label label-danger') Atenção!]
-    p(class='lead' style='margin-top: 30px;') O jogador #{name} está jogando uma importante partida rankeada! ESPERE ele(a) responder suas mensagens e EM HIPÓTESE ALGUMA LIGUE!
+    p(class='lead' style='margin-top: 30px;') 
+      | O jogador 
+      span(class='label label-default') #{name} 
+      | está jogando uma importante partida RANKEADA! ESPERE ele(a) responder suas mensagens e EM HIPÓTESE ALGUMA LIGUE!
     p
       a(role='button' href='/./.' class='btn btn-md btn-primary') Voltar
   div(class='row marketing')

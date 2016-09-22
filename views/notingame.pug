@@ -2,7 +2,10 @@ extends includes/layout.pug
 block content
   div(class='jumbotron')
     h1 #[span(class='label label-success') Eba!!]
-    p(class='lead' style='margin-top: 30px;') Éé...ao que tudo indica  #{name} não está jogando no momento. Ele deverá responder suas mensagens e atender suas ligações.
+    p(class='lead' style='margin-top: 30px;') 
+      | Éé...ao que tudo indica 
+      span(class='label label-default') #{name} 
+      | não está jogando no momento. Nos próximos minutos, ele deve responder suas mensagens e atender suas ligações.
     p
       a(role='button' href='/./.' class='btn btn-md btn-primary') Voltar
   div(class='row marketing')
