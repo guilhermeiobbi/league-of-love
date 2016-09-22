@@ -1,1 +1,43 @@
-<h1>INVOCADOR #{name} NAO ESTA EM JOGO.</h1>
+doctype html
+html
+    include head.pug
+    body
+      div(class='container')
+        div(class='header clearfix')
+          nav
+            ul(class='nav nav-pills pull-right')
+              li(class='active' role='presentation')
+                a(href='#') Home
+              li(role='presentation')
+                a(href='#') Sobre
+            h3(class='text-muted') League Finder v0.0.1
+        div(class='jumbotron')
+          h1 Oops!
+          p(class='lead') Éé...me parece que o 
+            br
+            b #{name}
+          p não está jogando no momento. Será que ele não está jogando em outra conta?
+          p
+            a(role='button' href='#' class='btn btn-lg btn-primary') Voltar
+        div(class='row marketing')
+          div(class='col-lg-6')
+            h4 Subheading
+            p Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+
+            h4 Subheading
+            p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+
+            h4 Subheading
+            p Maecenas sed diam eget risus varius blandit sit amet non magna.
+
+          div(class='col-lg-6')
+            h4 Subheading
+            p Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+
+            h4 Subheading
+            p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+
+            h4 Subheading
+            p Maecenas sed diam eget risus varius blandit sit amet non magna.
+
+        include foot.pug

@@ -8,13 +8,16 @@
         <meta name="author" content="">
         <link rel="icon" href="../favicon.ico">
 
-        <title>League Finder - Find your Summoner Stats</title>
+        <title>League Finder v0.0.1</title>
 
         <!-- JQuery core JS -->
         <script src="static/jquery/jquery.min.js"></script>
 
         <!-- Bootstrap core CSS -->
         <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="static/css/jumbotron-narrow.css" rel="stylesheet">
 
         <!-- Custom JS -->
         <script src="static/js/functions.js"></script>
@@ -28,48 +31,62 @@
     </head>
 
     <body>
-        <div class="panel panel-default ">
-            <div class="panel-body">
-                <div class="container">
-                    <div class="col-lg-12">
-                        <div class="col-lg-6 col-lg-offset-4">
-                            <form id="myForm" class="form-inline" action="/api/findSummoner" method="POST">
-                                <h2 class="form-signin-heading">League Finder v1.0</h2>
-                                <div class="input-group input-group-sm">
-                                    <input id="inputName" class="form-control" placeholder="Nome do invocador" name="summoner_name" autofocus>
-                                    <input id="inputRegion" type="hidden" name="region" value="BR">
-                                    <div class="input-group-btn">
-                                        <a href="#" role="button" class="btn btn-default disabled">BR </a>
-                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" 
-                                                aria-haspopup="true" aria-expanded="false">
-                                            <span class="caret"></span>
-                                            <span class="sr-only">Toggle Dropdown</span>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-right">
-                                            <li><a href="#">BR</a></li>
-                                            <li><a href="#">EUNE</a></li>
-                                            <li><a href="#">EUW</a></li>
-                                            <li><a href="#">LAN</a></li>
-                                            <li><a href="#">LAS</a></li>
-                                            <li><a href="#">NA</a></li>
-                                            <li><a href="#">OCE</a></li>
-                                            <li><a href="#">RU</a></li>
-                                            <li><a href="#">TR</a></li>
-                                            <li><a href="#">JP</a></li>
-                                            <li><a href="#">SEA</a></li>
-                                            <li><a href="#">KR</a></li>
-                                        </ul>
-                                    </div>
-                                </div> <!-- input-group -->
-                                <button id="searchButton" type="submit" data-loading-text="..." class="btn btn-primary btn-md">
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                </button>
-                            </form>
-                        </div>
-                    </div> 
-                </div> <!-- /container -->
-            </div> <!-- /panel-body -->
-        </div> <!-- /panel-default -->
+        <div class="container">
+            
+            <div class="header clearfix">
+                <nav>
+                    <ul class="nav nav-pills pull-right">
+                        <li class="active" role="presentation"><a href="#">Home</a></li>
+                        <li role="presentation"><a href="#">Sobre</a></li>
+                    </ul>
+                    <h3 class="text-muted">League Finder v0.0.1</h3>
+                </nav>
+            </div>
+
+            <div class="panel panel-default ">
+                <div class="panel-body">
+                    <div class="container">
+                        <div class="col-lg-12">
+                            <div class="col-lg-6 col-lg-offset-4">
+                                <form id="myForm" class="form-inline" action="/api/findSummoner" method="POST">
+                                    <h2 class="form-signin-heading">League Finder v1.0</h2>
+                                    <div class="input-group input-group-sm">
+                                        <input id="inputName" class="form-control" placeholder="Nome do invocador" name="summoner_name" 
+                                            required="true" autofocus>
+                                        <input id="inputRegion" type="hidden" name="region" value="BR">
+                                        <div class="input-group-btn">
+                                            <a href="#" role="button" class="btn btn-default disabled">BR </a>
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" 
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                <span class="caret"></span>
+                                                <span class="sr-only">Toggle Dropdown</span>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-right">
+                                                <li><a href="#">BR</a></li>
+                                                <li><a href="#">EUNE</a></li>
+                                                <li><a href="#">EUW</a></li>
+                                                <li><a href="#">LAN</a></li>
+                                                <li><a href="#">LAS</a></li>
+                                                <li><a href="#">NA</a></li>
+                                                <li><a href="#">OCE</a></li>
+                                                <li><a href="#">RU</a></li>
+                                                <li><a href="#">TR</a></li>
+                                                <li><a href="#">JP</a></li>
+                                                <li><a href="#">SEA</a></li>
+                                                <li><a href="#">KR</a></li>
+                                            </ul>
+                                        </div>
+                                    </div> <!-- input-group -->
+                                    <button id="searchButton" type="submit" data-loading-text="..." class="btn btn-primary btn-md">
+                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div> 
+                    </div> <!-- /container -->
+                </div> <!-- /panel-body -->
+            </div> <!-- /panel-default -->
+        </div>
     </body>
 
     <!-- Bootstrap core JS -->
