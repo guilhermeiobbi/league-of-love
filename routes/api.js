@@ -10,7 +10,13 @@ router.post('/findSummoner', function(req, res) {
     console.log('PARAMs: ' + filteredName + ', ' + reg);
     
     endpoints.findSummonerByName(reg, filteredName, function(data) {
-        console.log('Invocador encontrado: ' + JSON.stringify(data));
+        if(data['status']) {
+                res.render(
+                    'notexist',
+                     { name: name });
+                res.end();
+                return;
+        }
         
         validName = name.toLowerCase().replace(/\s+/g, '');
         console.log('validName: ' + validName);
