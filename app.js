@@ -12,6 +12,7 @@ var bodyParser = require('body-parser');
  */
 var api   = require('./routes/api');
 var index = require('./routes/index');
+var about = require('./routes/about');
 
 /**
  * JSON support definitions
@@ -22,13 +23,14 @@ app.use(bodyParser.json());
 /**
  * Pug 
  */
-app.set('view engine', 'pug')
+app.set('view engine', 'pug');
 
 /**
  * Routes
  */
 app.use('/', index);
 app.use('/api', api);
+app.use('/about', about);
 
 /**
  * Including static folders and files
