@@ -1,7 +1,6 @@
 var express   = require('express');
 var router    = express.Router();
 var endpoints = require('./endpoints/endpoints');
-const pug     = require('pug');
 
 router.post('/findSummoner', function(req, res) {
     var name = (req.body.summoner_name).trim();
@@ -27,18 +26,14 @@ router.post('/findSummoner', function(req, res) {
                     'notingame',
                      { name: name });
             } else {
-                if(data['gameType'] == 'MATCHED_GAME') {
-                    // console.log('>>>>>>>> Nome: '+ data.participants.summonerName[name].championId)
+                // if(data['gameType'] == 'MATCHED_GAME') {
                     res.render(
                     'ingame',
                      { name: name });
                     res.end();
-                }
+                // }
             }
         })
-        
-        // res.send({ id: summId });
-        // res.end();
     });
 });
 

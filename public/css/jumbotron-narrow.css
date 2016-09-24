@@ -2,6 +2,7 @@
 body {
     padding-bottom: 20px;
     padding-top: 20px;
+    height: 100%;
 }
 .header, .marketing, .footer {
     padding-left: 15px;
@@ -53,10 +54,9 @@ body {
   padding-top: 20px;
 }
 #footer{
-    position:fixed;
-    height:50px;
-    bottom:0px;
-    left:0px;
-    right:0px;
-    margin-bottom:0px;
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    /*margin-top: -3em;*/
 }

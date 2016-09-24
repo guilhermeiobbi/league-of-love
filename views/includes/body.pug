@@ -1,7 +1,7 @@
 body
-  div(class='container')
+  div(class='container' style='min-height: 100%;')
     block header
       include header.pug
     block content
-    block foot
-  include foot.pug
+  block foot
+    include foot.pug
