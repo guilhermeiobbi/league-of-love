@@ -1,6 +1,6 @@
 {
   "name": "league-finder",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "body-parser": "^1.15.2",
