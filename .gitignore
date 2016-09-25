@@ -4,3 +4,4 @@ node_modules
 .vscode
 bin
 # Riot Developers Personal API
+routes/endpoints/api-key.js
