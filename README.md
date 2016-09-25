@@ -3,10 +3,10 @@
 
 This project might be useful, someday...
 
-But actually it is a user-search platform for League of Legends.
+But actually it is a user-search platform for <i>League of Legends</i>.
 
 Disclaimer
 
 League-of-Love isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games or anyone officially 
-involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks 
-of Riot Games, Inc. League of Legends © Riot Games, Inc.
+involved in producing or managing <i>League of Legends</i>. <i>League of Legends</i> and Riot Games are trademarks or
+ registered trademarks of Riot Games, Inc. <i>League of Legends</i> © Riot Games, Inc.
