@@ -2,6 +2,9 @@
   "name": "league-finder",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "6.0.0"
+  },
   "dependencies": {
     "body-parser": "^1.15.2",
     "debug": "~2.2.0",
