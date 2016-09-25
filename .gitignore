@@ -1,3 +1,7 @@
+# Node modules dir
 node_modules
+# Default Visual Studio Code debugging dirs
 .vscode
 bin
+# Riot Developers Personal API
+routes/endpoints/api-key.js
