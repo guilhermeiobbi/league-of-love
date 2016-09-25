@@ -11,5 +11,22 @@
     "nodemon": "^1.10.2",
     "pug": "^2.0.0-beta6",
     "querystring": "^0.2.0"
-  }
+  },
+  "description": "This project might be useful, someday...\r But actually it is a user-search platform for <i>League of Legends</i>.",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilhermeiobbi/league-finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guilhermeiobbi/league-finder/issues"
+  },
+  "homepage": "https://github.com/guilhermeiobbi/league-finder#readme"
 }
