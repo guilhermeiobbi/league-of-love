@@ -40,9 +40,10 @@ app.use('/static', express.static(__dirname + '/public'));
 /**
  * Server init
  */
-const PORT = 3000;
+app.set('port', (process.env.PORT || 5000));
+// const PORT = 3000;
 
-app.listen(PORT, function () {
-  console.log('Server listening on PORT %s!', PORT);
+app.listen(app.get('port'), function () {
+  console.log('Server listening on PORT ', app.get('port'));
 });
 
