@@ -11,6 +11,11 @@ $(function(){
         $('#searchButton').prop('disabled', true);
     });
 
+    $('#aboutBtn').click(function(){
+        $('#homeLink').removeClass();
+        $('#aboutLink').addClass('active');
+    });
+
 });
 
 

@@ -6,7 +6,7 @@ var router  = express.Router();
  */
 router.get('/', function (req, res)
 {
-    res.render('index.pug');
+    res.render('index.pug', { home: 'active', about: '' });
 });
 
 module.exports = router;

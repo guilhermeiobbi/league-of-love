@@ -4,7 +4,7 @@ block content
     div(class='panel-body text-center')
       div(class='container')
         div(class='col-lg-12')
-          div(class='col-lg-4 col-lg-offset-4')
+          div(class='col-md-4 col-lg-offset-4')
             form(id='myForm' class='form-inline' action='/api/findSummoner' method='POST')
               h2(class='form-signin-heading') Find your #[i(class='fa fa-heart fa-2' aria-hidden='true')]
               div(class='input-group input-group-sm')
@@ -40,8 +40,9 @@ block content
                       a(href='#') SEA
                     li
                       a(href='#') KR
-              button(id='searchButton' type='submit' class='btn btn-default btn-md' style='height: 30px;')
-                i(id='searchIcon' class='fa fa-search')
+              div(class='input-group input-group-sm')
+                button(id='searchButton' type='submit' class='btn btn-default btn-md btn-block' style='height: 30px;')
+                  i(id='searchIcon' class='fa fa-search')
   div(class='row marketing')
     div(class='col-lg-6')
       h4 Encontre seu parceiro

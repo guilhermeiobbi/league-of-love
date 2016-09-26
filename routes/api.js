@@ -20,16 +20,17 @@ router.post('/findSummoner', function(req, res) {
         validName = name.toLowerCase().replace(/\s+/g, '');
         console.log('validName: ' + validName);
         var summId = data[validName].id;
+        var summName = data[validName].name;
         endpoints.findLiveGameById(reg, summId, function(data) {
             if(data['status']) {
                 res.render(
                     'notingame',
-                     { name: name });
+                     { name: summName });
             } else {
                 // if(data['gameType'] == 'MATCHED_GAME') {
                     res.render(
                     'ingame',
-                     { name: name });
+                     { name: summName });
                     res.end();
                 // }
             }
