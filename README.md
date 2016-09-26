@@ -1,6 +1,5 @@
 # league-of-love
 
-
 League of Love is a user-search platform for <i>League of Legends</i>.
 
 ## Disclaimer
