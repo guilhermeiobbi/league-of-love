@@ -1,8 +1,7 @@
 # league-of-love
 
 
-This project might be useful, someday...
-But actually it is a user-search platform for <i>League of Legends</i>.
+League of Love is a user-search platform for <i>League of Legends</i>.
 
 ## Disclaimer
 
