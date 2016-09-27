@@ -1,7 +1,7 @@
 extends includes/layout.pug
 block content
   div(class='jumbotron')
-    h1 #[span(class='label label-danger') Atenção!]
+    h1 #[span(class='label label-danger') PERIGO!]
     p(class='lead' style='margin-top: 30px;') 
       | O jogador 
       span(class='label label-default') #{name}
@@ -9,11 +9,10 @@ block content
     p
       a(role='button' href='/' class='btn btn-md btn-primary') Voltar
   div(class='row marketing')
-    div(class='col-lg-6')
+    div(class='col-lg-6' style='margin-bottom: 28px;')
       h4 Demorando muito?
       p Se os jogos demorarem muito, possivelmente seu namorado(a) não é um bom jogador. 
         | Os jogos no low elo são sem objetivos e geralmente mais demorados.
-    br        
     div(class='col-lg-6')
       h4 Ele(a) se diz bom?
       p Pergunte se ele(a) já pisou no #[i desafiante].
