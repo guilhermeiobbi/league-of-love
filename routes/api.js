@@ -27,12 +27,17 @@ router.post('/findSummoner', function(req, res) {
                     'notingame',
                      { name: summName });
             } else {
-                // if(data['gameType'] == 'MATCHED_GAME') {
+                if(data['gameQueueConfigId'] == '410') {
                     res.render(
                     'ingame',
                      { name: summName });
                     res.end();
-                // }
+                } else {
+                    res.render(
+                    'ingame-normal',
+                     { name: summName });
+                    res.end();
+                }
             }
         })
     });
