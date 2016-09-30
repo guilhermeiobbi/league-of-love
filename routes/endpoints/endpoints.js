@@ -2,12 +2,10 @@ var querystring = require('querystring');
 var https       = require('https');
 
 var API_ENDPOINT = '.api.pvp.net'
-var WEBSERVICE = '/api/lol/';
+var WEBSERVICE   = '/api/lol/';
 
 var WS_METHOD              = '/v1.4/summoner/by-name/';
 var WS_METHOD_CURRENT_GAME = '/observer-mode/rest/consumer/getSpectatorGameInfo/'
-
-// var ENDPOINT_FIND_LAST_GAMES_BY_ID = 'https://br.api.pvp.net/api/lol/br/v1.3/game/by-summoner/{summoner-id}/recent';
 
 var parameters  = require('./api-key').parameters;
 
@@ -43,7 +41,7 @@ function findLiveGameById(reg, id, success) {
 
 function doRequest(options, success) {
     var req = https.get(options, function(res) {
-        res.setEncoding('utf-8');
+        res.setEncoding('utf8');
         var responseString = '';
 
         res.on('data', function(data) {
