@@ -3,12 +3,10 @@ var https       = require('https');
 var utf8        = require('utf8');
 
 var API_ENDPOINT = '.api.pvp.net'
-var WEBSERVICE = '/api/lol/';
+var WEBSERVICE   = '/api/lol/';
 
 var WS_METHOD              = '/v1.4/summoner/by-name/';
 var WS_METHOD_CURRENT_GAME = '/observer-mode/rest/consumer/getSpectatorGameInfo/'
-
-// var ENDPOINT_FIND_LAST_GAMES_BY_ID = 'https://br.api.pvp.net/api/lol/br/v1.3/game/by-summoner/{summoner-id}/recent';
 
 var parameters  = require('./api-key').parameters;
 

@@ -71,3 +71,18 @@ h3.title-navbar {
 p.text-disclaimer {
     font-size: 12px;
 }
+p.twitter-upper-btn {
+    margin-top: 10px;
+    display: none;
+}
+p.twitter-right-btn {
+    display: block;
+}
+@media only screen and (max-width: 455px) {
+    p.twitter-upper-btn {
+        display: block;
+    }
+    p.twitter-right-btn {
+        display: none;
+    }
+}
