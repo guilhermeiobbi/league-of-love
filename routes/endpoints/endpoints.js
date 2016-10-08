@@ -1,5 +1,6 @@
 var querystring = require('querystring');
 var https       = require('https');
+var utf8        = require('utf8');
 
 var API_ENDPOINT = '.api.pvp.net'
 var WEBSERVICE = '/api/lol/';
@@ -12,7 +13,7 @@ var WS_METHOD_CURRENT_GAME = '/observer-mode/rest/consumer/getSpectatorGameInfo/
 var parameters  = require('./api-key').parameters;
 
 function findSummonerByName(reg, name, success) {
-    var path = WEBSERVICE + reg + WS_METHOD + name + '?' + querystring.stringify(parameters);
+    var path = WEBSERVICE + reg + WS_METHOD + utf8.encode(name) + '?' + querystring.stringify(parameters);
     var endpoint = reg + API_ENDPOINT;
     console.log('GET on: ' + endpoint + path);
     
@@ -43,7 +44,6 @@ function findLiveGameById(reg, id, success) {
 
 function doRequest(options, success) {
     var req = https.get(options, function(res) {
-        res.setEncoding('utf-8');
         var responseString = '';
 
         res.on('data', function(data) {

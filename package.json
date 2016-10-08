@@ -13,7 +13,8 @@
     "node-rest-client": "^2.0.1",
     "nodemon": "^1.10.2",
     "pug": "^2.0.0-beta6",
-    "querystring": "^0.2.0"
+    "querystring": "^0.2.0",
+    "utf8": "^2.1.1"
   },
   "description": "This project might be useful, someday...\r But actually it is a user-search platform for <i>League of Legends</i>.",
   "main": "app.js",
